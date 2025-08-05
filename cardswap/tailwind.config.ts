@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+// tailwind.config.js
 export default {
   content: [
     "./index.html",
@@ -6,21 +6,21 @@ export default {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        poppins: ['Poppins', 'sans-serif']
-      },
       colors: {
         bg: "#F0F0F0",
         whiteCustom: "#F3F3F3",
         blackCustom: "#313131",
         grayCustom: "#696969"
       },
+      fontFamily: {
+        sans: ["Poppins", "sans-serif"]
+      },
       borderRadius: {
         sm: "4px",
         md: "8px",
         lg: "16px"
       }
-    },
+    }
   },
-  plugins: [],
+  plugins: []
 };

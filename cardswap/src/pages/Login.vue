@@ -1,10 +1,12 @@
 <template>
   <AuthCard>
+    <!-- Title -->
     <h1 class="text-2xl font-semibold text-center mb-2">Welcome back</h1>
     <p class="text-sm text-grayCustom text-center mb-6">
-      Sign in to your account to continue trading cards
+      Sign in to your account to continue trading cards.
     </p>
 
+    <!-- Form -->
     <form @submit.prevent="handleLogin" class="space-y-4">
       <FormTextInput
         label="Email"
@@ -20,15 +22,19 @@
 
       <button
         type="submit"
-        class="w-full bg-blackCustom text-white py-2 rounded-md hover:opacity-90"
+        class="w-full bg-blackCustom text-white py-2 rounded-md hover:opacity-90 transition-opacity"
       >
         Sign in
       </button>
     </form>
 
+    <!-- Footer -->
     <p class="text-sm text-center text-grayCustom mt-4">
       Don't have an account?
-      <router-link to="/register" class="text-blackCustom font-medium hover:underline">
+      <router-link
+        to="/register"
+        class="text-blackCustom font-medium hover:underline"
+      >
         Sign up
       </router-link>
     </p>
@@ -36,15 +42,15 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import AuthCard from '../components/AuthCard.vue';
-import FormTextInput from '../components/FormTextInput.vue';
-import PasswordInput from '../components/PasswordInput.vue';
+import { ref } from "vue";
+import AuthCard from "../components/AuthCard.vue";
+import FormTextInput from "../components/FormTextInput.vue";
+import PasswordInput from "../components/PasswordInput.vue";
 
-const email = ref('');
-const password = ref('');
+const email = ref("");
+const password = ref("");
 
 function handleLogin() {
-  console.log('Login with:', email.value, password.value);
+  console.log("Login with:", email.value, password.value);
 }
 </script>

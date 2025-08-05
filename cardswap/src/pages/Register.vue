@@ -1,78 +1,63 @@
 <template>
-  <div class="flex flex-col items-center justify-center min-h-screen bg-bg px-4">
-    <div class="w-full max-w-md bg-whiteCustom rounded-md shadow p-8">
-      <h1 class="text-2xl font-semibold text-center mb-2">Join into our community</h1>
-      <p class="text-sm text-grayCustom text-center mb-6">
-        Create an account and start trading cards today
-      </p>
+  <AuthCard>
+    <!-- Title -->
+    <h1 class="text-2xl font-semibold text-center mb-2">Create your account</h1>
+    <p class="text-sm text-grayCustom text-center mb-6">
+      Join CardSwap today and start trading your favorite cards.
+    </p>
 
-      <form @submit.prevent="handleRegister" class="space-y-4">
-        <div>
-          <label class="block mb-1 text-sm font-medium">Full Name</label>
-          <input
-            type="text"
-            v-model="fullName"
-            placeholder="Enter your full name"
-            class="w-full border border-gray-300 rounded-sm p-2 focus:outline-none focus:ring-2 focus:ring-blackCustom"
-          />
-        </div>
+    <!-- Form -->
+    <form @submit.prevent="handleRegister" class="space-y-4">
+      <FormTextInput
+        label="Name"
+        type="text"
+        placeholder="Enter your name"
+        v-model="name"
+      />
+      <FormTextInput
+        label="Email"
+        type="email"
+        placeholder="Enter your email"
+        v-model="email"
+      />
+      <PasswordInput
+        label="Password"
+        placeholder="Create a password"
+        v-model="password"
+      />
 
-        <div>
-          <label class="block mb-1 text-sm font-medium">Email</label>
-          <input
-            type="email"
-            v-model="email"
-            placeholder="Enter your email"
-            class="w-full border border-gray-300 rounded-sm p-2 focus:outline-none focus:ring-2 focus:ring-blackCustom"
-          />
-        </div>
+      <button
+        type="submit"
+        class="w-full bg-blackCustom text-white py-2 rounded-md hover:opacity-90 transition-opacity"
+      >
+        Sign up
+      </button>
+    </form>
 
-        <div>
-          <label class="block mb-1 text-sm font-medium">Password</label>
-          <div class="relative">
-            <input
-              :type="showPassword ? 'text' : 'password'"
-              v-model="password"
-              placeholder="Create a password"
-              class="w-full border border-gray-300 rounded-sm p-2 focus:outline-none focus:ring-2 focus:ring-blackCustom"
-            />
-            <button
-              type="button"
-              @click="showPassword = !showPassword"
-              class="absolute right-3 top-2 text-grayCustom"
-            >
-              <i :class="showPassword ? 'fa-solid fa-eye-slash' : 'fa-solid fa-eye'"></i>
-            </button>
-          </div>
-        </div>
-
-        <button
-          type="submit"
-          class="w-full bg-blackCustom text-white py-2 rounded-md hover:opacity-90"
-        >
-          Create Account
-        </button>
-      </form>
-
-      <p class="text-sm text-center text-grayCustom mt-4">
-        Already have an account?
-        <router-link to="/login" class="text-blackCustom font-medium hover:underline">
-          Sign in
-        </router-link>
-      </p>
-    </div>
-  </div>
+    <!-- Footer -->
+    <p class="text-sm text-center text-grayCustom mt-4">
+      Already have an account?
+      <router-link
+        to="/login"
+        class="text-blackCustom font-medium hover:underline"
+      >
+        Sign in
+      </router-link>
+    </p>
+  </AuthCard>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref } from "vue";
+import AuthCard from "../components/AuthCard.vue";
+import FormTextInput from "../components/FormTextInput.vue";
+import PasswordInput from "../components/PasswordInput.vue";
 
-const fullName = ref('');
-const email = ref('');
-const password = ref('');
-const showPassword = ref(false);
+const name = ref("");
+const email = ref("");
+const password = ref("");
 
 function handleRegister() {
-  console.log('Register with:', fullName.value, email.value, password.value);
+  console.log("Register with:", name.value, email.value, password.value);
 }
 </script>
