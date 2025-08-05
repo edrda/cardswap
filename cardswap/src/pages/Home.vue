@@ -10,6 +10,11 @@
       </p>
     </div>
 
+    <!-- Botão New Trade (somente se logado) -->
+    <div v-if="auth.user" class="flex justify-center mb-6">
+      <NewTradeButton />
+    </div>
+
     <!-- Barra de busca -->
     <SearchBar class="mb-10" />
 
@@ -25,4 +30,8 @@
 <script setup lang="ts">
 import SearchBar from "../components/SearchBar.vue";
 import TradeCard from "../components/TradeCard.vue";
+import NewTradeButton from "../components/NewTradeButton.vue";
+import { useAuthStore } from "../stores/auth";
+
+const auth = useAuthStore();
 </script>
