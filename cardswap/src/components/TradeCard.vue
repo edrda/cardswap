@@ -34,7 +34,7 @@
 
     <div class="flex justify-between items-center text-sm text-gray-500 mt-4">
       <span>{{ tradeInfo }}</span>
-      <button class="px-3 py-1 bg-zinc-900 text-stone-100 rounded-md hover:bg-zinc-800 transition">
+      <button class="px-3 py-1 bg-zinc-900 text-stone-100 rounded-md hover:bg-zinc-800 transition cursor-pointer">
         View Trade
       </button>
     </div>
