@@ -2,6 +2,9 @@
 
 Projeto desenvolvido para o desafio técnico da vaga de Front-end da **InMeta**.
 
+## 🌐 Deploy
+https://cardswapmarketplace.vercel.app
+
 ## 🚀 Tecnologias
 
 - [Vue 3](https://vuejs.org/) (Composition API)
@@ -55,5 +58,8 @@ src/
 └── App.vue
 
 💡 Este projeto foi desenvolvido exclusivamente para fins de avaliação técnica.
+```
 
-
+## ✒️ Extra!
+Para esse projeto, desenhei também a UI no figma. Pensando em uma interface mais limpa e minimalista, além de responsividade.
+https://www.figma.com/design/NIOyAY5BlmKOdHafgPYSaT/CardTrade?node-id=11-2&t=KrSj6ZBEeS98uygM-1
