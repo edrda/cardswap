@@ -10,6 +10,8 @@ Projeto desenvolvido para o desafio técnico da vaga de Front-end da **InMeta**.
 - [Pinia](https://pinia.vuejs.org/) (gerenciamento de estado)
 - [Axios](https://axios-http.com/) (requisições HTTP)
 - [Vue Router](https://router.vuejs.org/) (roteamento de páginas)
+- [Tailwind](https://tailwindcss.com) (estilização padronizada)
+
 
 ## ✨ Funcionalidades
 
@@ -38,7 +40,6 @@ Projeto desenvolvido para o desafio técnico da vaga de Front-end da **InMeta**.
    npm run dev
 
 5. **Abra no navegador:**
-   ```bash
   http://localhost:5173
 
 ## 📂 Estrutura inicial do projeto
